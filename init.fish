@@ -9,6 +9,11 @@ sudo pacman -S paru
 #install cachyos gaming packages
 paru -S cachyos-gaming-meta
 
+#-----user setup-----
+#gitconfig setup
+log 'Install gitconfig...'
+ln -sf (realpath .gitconfig) $HOME/.gitconfig
+
 #-----install caelestia-----
 #install prerequisite
 log 'Install prerequisite dependencies for caelestia'
@@ -19,7 +24,7 @@ git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelest
 ~/.local/share/caelestia/install.fish --noconfirm --paru
 
 #install caelestia-dots(user)
-log 'Installing caelestia(user) configs...'
+log 'Install caelestia(user) configs...'
 rm -rf $HOME/.config/caelestia
 ln -s (realpath caelestia) $HOME/.config/caelestia
 
