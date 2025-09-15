@@ -25,8 +25,11 @@ git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelest
 
 #install caelestia-dots(user)
 log 'Install caelestia(user) configs...'
-rm -rf $HOME/.config/caelestia
+rm -rf $HOME/.config/caelestia $HOME/Pictures/Wallpapers
 ln -s (realpath caelestia) $HOME/.config/caelestia
+ln -s (realpath Wallpapers) $HOME/Pictures/Wallpapers
+caelestia wallpaper -f (realpath Wallpapers/96275146_p0.jpg)
+caelestia scheme set -n dynamic
 
 #-----install other packages-----
 #install fcitx5 with chewing
