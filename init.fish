@@ -25,7 +25,8 @@ git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelest
 
 #install caelestia-dots(user)
 log 'Install caelestia(user) configs...'
-rm -rf $HOME/.config/caelestia $HOME/Pictures/Wallpapers
+mv $HOME/.config/caelestia{,.bak}
+mv $HOME/Pictures/Wallpapers{,bak}
 ln -s (realpath caelestia) $HOME/.config/caelestia
 ln -s (realpath Wallpapers) $HOME/Pictures/Wallpapers
 caelestia wallpaper -f (realpath black-aesthetic-1920X1080-wallpaper-1fdqsi6u8wfz8rno.jpeg)
@@ -35,19 +36,19 @@ caelestia scheme set -n dynamic
 #install fcitx5 with chewing
 paru -S fcitx5 fcitx5-configtool fcitx5-chewing
 log 'Install fcitx5 configs...'
-rm -rf $HOME/.config/fcitx5
+mv $HOME/.config/fcitx5{,.bak}
 ln -s (realpath fcitx5) $HOME/.config/fcitx5
 
 #install lazyvim
 paru -S neovim
 log 'Install nvim(lazyvim) configs...'
-rm -rf $HOME/.config/nvim
-ln -s (realpath nvim) $HOME/.config/nvim
+mv $HOME/.config/nvim{,.bak}
+ln -s (realpath lua) $HOME/.config/nvim/lua
 
 #install MangoHud
 paru -S mangohud mangojuice
 log 'Install Mangohud configs...'
-rm -rf $HOME/.config/MangoHud
+mv $HOME/.config/MangoHud{,.bak}
 ln -s (realpath MangoHud) $HOME/.config/MangoHud
 
 #install zen-browser
