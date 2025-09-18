@@ -33,20 +33,16 @@ return {
 
 	{
 		"vague2k/vague.nvim",
+		lazy = true,
 		priority = 1000, -- make sure to load this before all the other plugins
-		config = function()
-			-- NOTE: you do not need to call setup if you don't want to.
-			require("vague").setup({
-				-- optional configuration here
-				transparent = true,
-			})
-			vim.cmd("colorscheme vague")
-		end,
+		opts = {
+			transparent = true,
+		},
 	},
 
 	{
 		"LazyVim/LazyVim",
-		lazy = true,
+
 		opts = {
 			colorscheme = "vague",
 		},
