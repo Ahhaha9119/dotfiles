@@ -1,10 +1,14 @@
 return {
 	-- add gruvbox
-	{ "ellisonleao/gruvbox.nvim" },
+	{
+		"ellisonleao/gruvbox.nvim",
+		opts = {
+			transparent_mode = true,
+		},
+	},
 
 	{
 		"folke/tokyonight.nvim",
-		lazy = true,
 		opts = {
 			transparent = true,
 			style = "moon",
@@ -16,9 +20,35 @@ return {
 	},
 
 	{
-		"LazyVim/LazyVim",
+		"rebelot/kanagawa.nvim",
 		opts = {
-			colorscheme = "tokyonight",
+			transparent = true,
+			style = "dragon",
+			styles = {
+				sidebars = "transparent",
+				floats = "transparent",
+			},
+		},
+	},
+
+	{
+		"vague2k/vague.nvim",
+		priority = 1000, -- make sure to load this before all the other plugins
+		config = function()
+			-- NOTE: you do not need to call setup if you don't want to.
+			require("vague").setup({
+				-- optional configuration here
+				transparent = true,
+			})
+			vim.cmd("colorscheme vague")
+		end,
+	},
+
+	{
+		"LazyVim/LazyVim",
+		lazy = true,
+		opts = {
+			colorscheme = "vague",
 		},
 	},
 }
