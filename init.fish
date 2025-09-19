@@ -23,6 +23,9 @@ paru -S quickshell-git caelestia-shell-git
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
 ~/.local/share/caelestia/install.fish --noconfirm --paru
 
+#install Bibata Cursors
+paru -S bibata-cursor-theme-bin
+
 #install caelestia-dots(user)
 log 'Install caelestia(user) configs...'
 mv $HOME/.config/caelestia{,.bak}
