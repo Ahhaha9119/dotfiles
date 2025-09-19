@@ -15,18 +15,18 @@ set common_fps_limits 60
 
 # Extract current refresh rate from the monitor line and current FPS limit from MangoHud config
 set current_rate (grep -Po '(?<=@)\d+' $config_file)
-set current_limit (grep -Po '(?<=fps_limit=)\d+' $mango_config)
+#set current_limit (grep -Po '(?<=fps_limit=)\d+' $mango_config)
 
 if test "$current_rate" = "$rate_high"
     set new_rate $rate_low
     set new_limit $limit_low
 
-    sed -i "s/^\(fps_limit=\)$current_limit,,/\1$common_fps_limits,$new_limit,/" $mango_config
+    sed -i "s/^\(fps_limit=\)$limit_high,,/\1$common_fps_limits,$new_limit,/" $mango_config
 else
     set new_rate $rate_high
     set new_limit $limit_high
 
-    sed -i "s/^\(fps_limit=\)$current_limit,60,/\1$new_limit,,/" $mango_config
+    sed -i "s/^\(fps_limit=\)$common_fps_limits,$limit_low,/\1$new_limit,,/" $mango_config
 end
 
 # Replace only the refresh rate part
