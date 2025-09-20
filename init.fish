@@ -31,7 +31,7 @@ log 'Install caelestia(user) configs...'
 mv $HOME/.config/caelestia{,.bak}
 mv $HOME/Pictures/Wallpapers{,bak}
 ln -s (realpath caelestia) $HOME/.config/caelestia
-ln -s (realpath Wallpapers) $HOME/Pictures/Wallpapers
+cp -r (realpath Wallpapers) $HOME/Pictures/Wallpapers
 caelestia wallpaper -f (realpath black-aesthetic-1920X1080-wallpaper-1fdqsi6u8wfz8rno.jpeg)
 caelestia scheme set -n dynamic
 
