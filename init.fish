@@ -17,7 +17,7 @@ ln -sf (realpath .gitconfig) $HOME/.gitconfig
 #-----install caelestia-----
 #install prerequisite
 log 'Install prerequisite dependencies for caelestia'
-paru -S quickshell-git caelestia-shell-git
+paru -S quickshell-git caelestia-shell
 
 #install caelestia-dots
 git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelestia
