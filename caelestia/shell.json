@@ -283,7 +283,7 @@
     "paths": {
         "mediaGif": "root:/assets/bongocat.gif",
         "sessionGif": "root:/assets/kurukuru.gif",
-        "wallpaperDir": "~/Pictures/Wallpapers"
+        "wallpaperDir": "~/.dotfiles/Wallpapers"
     },
     "services": {
         "audioIncrement": 0.1,
