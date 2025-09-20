@@ -227,7 +227,7 @@
                 "name": "Logout",
                 "icon": "exit_to_app",
                 "description": "Log out of the current session",
-                "command": ["loginctl", "terminate-user", ""],
+                "command": ["hyprctl", "dispatch", "exit"],
                 "enabled": true,
                 "dangerous": true
             },
@@ -242,8 +242,8 @@
             {
                 "name": "Sleep",
                 "icon": "bedtime",
-                "description": "Suspend then hibernate",
-                "command": ["systemctl", "suspend-then-hibernate"],
+                "description": "Suspend",
+                "command": ["systemctl", "suspend"],
                 "enabled": true,
                 "dangerous": false
             }
