@@ -212,7 +212,7 @@
                 "icon": "power_settings_new",
                 "description": "Shutdown the system",
                 "command": ["systemctl", "poweroff"],
-                "enabled": true,
+                "enabled": false,
                 "dangerous": true
             },
             {
@@ -220,7 +220,7 @@
                 "icon": "cached",
                 "description": "Reboot the system",
                 "command": ["systemctl", "reboot"],
-                "enabled": true,
+                "enabled": false,
                 "dangerous": true
             },
             {
@@ -228,7 +228,7 @@
                 "icon": "exit_to_app",
                 "description": "Log out of the current session",
                 "command": ["hyprctl", "dispatch", "exit"],
-                "enabled": true,
+                "enabled": false,
                 "dangerous": true
             },
             {
@@ -244,7 +244,7 @@
                 "icon": "bedtime",
                 "description": "Suspend",
                 "command": ["systemctl", "suspend"],
-                "enabled": true,
+                "enabled": false,
                 "dangerous": false
             }
         ],
