@@ -1,10 +1,9 @@
 #!/usr/bin/env fish
+#
 #-----update System packages-----
 sudo pacman -Syyu
 
 #-----install fundamental packages-----
-#install paru
-sudo pacman -S paru
 
 #install cachyos gaming packages
 paru -S cachyos-gaming-meta
@@ -31,12 +30,11 @@ log 'Install caelestia(user) configs...'
 mv $HOME/.config/caelestia{,.bak}
 mv $HOME/Pictures/Wallpapers{,bak}
 ln -s (realpath caelestia) $HOME/.config/caelestia
-cp -r (realpath Wallpapers) $HOME/Pictures/Wallpapers
-caelestia wallpaper -f (realpath black-aesthetic-1920X1080-wallpaper-1fdqsi6u8wfz8rno.jpeg)
+caelestia wallpaper -f (realpath Wallpapers/black-aesthetic-1920X1080-wallpaper-1fdqsi6u8wfz8rno.jpeg)
 caelestia scheme set -n dynamic
 
 #-----install other packages-----
-#install fcitx5 with chewing
+#install fcitx5 and fcitx5-chewing
 paru -S fcitx5 fcitx5-configtool fcitx5-chewing
 log 'Install fcitx5 configs...'
 mv $HOME/.config/fcitx5{,.bak}
