@@ -8,6 +8,9 @@ sudo pacman -Syyu
 #install cachyos gaming packages
 paru -S cachyos-gaming-meta
 
+#variables
+set -q XDG_CONFIG_HOME && set -l config $XDG_CONFIG_HOME || set -l config $HOME/.config
+
 #-----user setup-----
 #gitconfig setup
 echo 'Install gitconfig...'
