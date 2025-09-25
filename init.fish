@@ -10,12 +10,12 @@ paru -S cachyos-gaming-meta
 
 #-----user setup-----
 #gitconfig setup
-log 'Install gitconfig...'
+echo 'Install gitconfig...'
 ln -sf (realpath .gitconfig) $HOME/.gitconfig
 
 #-----install caelestia-----
 #install prerequisite
-log 'Install prerequisite dependencies for caelestia'
+echo 'Install prerequisite dependencies for caelestia'
 paru -S quickshell-git
 
 #install caelestia-dots
@@ -26,7 +26,7 @@ git clone https://github.com/caelestia-dots/caelestia.git ~/.local/share/caelest
 paru -S bibata-cursor-theme-bin
 
 #install caelestia-dots(user)
-log 'Install caelestia(user) configs...'
+echo 'Install caelestia(user) configs...'
 mv $HOME/.config/caelestia{,.bak}
 mv $HOME/Pictures/Wallpapers{,bak}
 ln -s (realpath caelestia) $HOME/.config/caelestia
@@ -36,7 +36,7 @@ caelestia scheme set -n dynamic
 #-----install other packages-----
 #install fcitx5 and fcitx5-chewing
 paru -S fcitx5 fcitx5-configtool fcitx5-chewing
-log 'Install fcitx5 configs...'
+echo 'Install fcitx5 configs...'
 mv $HOME/.config/fcitx5{,.bak}
 ln -s (realpath fcitx5) $HOME/.config/fcitx5
 
@@ -53,13 +53,13 @@ ln -s (realpath lua) $HOME/.config/nvim/lua
 
 #install MangoHud
 paru -S mangohud mangojuice
-log 'Install Mangohud configs...'
+echo 'Install Mangohud configs...'
 mv $HOME/.config/MangoHud{,.bak}
 ln -s (realpath MangoHud) $HOME/.config/MangoHud
 
 #install zen-browser
 paru -S zen-browser-bin
-log 'Install zen-browser configs...'
+echo 'Install zen-browser configs...'
 mv $HOME/.zen/*/chrome{,.bak}
 ln -s (realpath chrome) $HOME/.zen/*/chrome
 
