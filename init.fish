@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-#
+
 #-----update System packages-----
 sudo pacman -Syyu
 
@@ -42,8 +42,13 @@ ln -s (realpath fcitx5) $HOME/.config/fcitx5
 
 #install lazyvim
 paru -S neovim
-log 'Install nvim(lazyvim) configs...'
-mv $HOME/.config/nvim{,.bak}
+
+echo 'Install lazyvim...'
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+echo 'Install nvim(lazyvim) configs...'
+mv $HOME/.config/nvim/lua{,.bak}
 ln -s (realpath lua) $HOME/.config/nvim/lua
 
 #install MangoHud
