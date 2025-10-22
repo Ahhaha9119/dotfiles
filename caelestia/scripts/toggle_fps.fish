@@ -5,11 +5,11 @@ set mango_config $HOME/.config/MangoHud/MangoHud.conf
 
 # Target refresh rates
 set rate_high 240
-set rate_low 60
+set rate_low 85
 
 # Target FPS limits
 set limit_high 237
-set limit_low 57
+set limit_low 60
 
 # set common_fps_limits 60
 
