@@ -9,7 +9,7 @@ set rate_low 60
 
 # Target FPS limits
 set limit_high 237
-set limit_low 60
+set limit_low 57
 
 # set common_fps_limits 60
 
