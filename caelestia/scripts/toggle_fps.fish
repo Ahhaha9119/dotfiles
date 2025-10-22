@@ -21,19 +21,19 @@ if test "$current_rate" = "$rate_high"
     set new_rate $rate_low
     set new_limit $limit_low
 
-    sed -i "s/^\(fps_limit=\)$limit_high,,/\1$new_limit,,/" $mango_config
+    #    sed -i "s/^\(fps_limit=\)$limit_high,,/\1$new_limit,,/" $mango_config
 else
     set new_rate $rate_high
     set new_limit $limit_high
 
-    sed -i "s/^\(fps_limit=\)$limit_low,,/\1$new_limit,,/" $mango_config
+    #    sed -i "s/^\(fps_limit=\)$limit_low,,/\1$new_limit,,/" $mango_config
 end
 
 # Replace only the refresh rate part
 sed -i "s/@$current_rate/@$new_rate/" $config_file
 
 # Update fps limit in MangoHud config
-# sed -i "s/^\(fps_limit=\)$current_limit,,/\1$new_limit,,/" $mango_config
+sed -i "s/^\(fps_limit=\)$current_limit,,/\1$new_limit,,/" $mango_config
 
 # Reload Hyprland to apply
 # hyprctl reload
