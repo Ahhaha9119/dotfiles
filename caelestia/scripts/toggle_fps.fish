@@ -15,7 +15,7 @@ set limit_low 60
 
 # Extract current refresh rate from the monitor line and current FPS limit from MangoHud config
 set current_rate (grep -Po '(?<=@)\d+' $config_file)
-# set current_limit (grep -Po '(?<=fps_limit=)\d+' $mango_config)
+set current_limit (grep -Po '(?<=fps_limit=)\d+' $mango_config)
 
 if test "$current_rate" = "$rate_high"
     set new_rate $rate_low
