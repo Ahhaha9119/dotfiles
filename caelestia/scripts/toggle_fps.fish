@@ -9,7 +9,7 @@ set rate_low 85
 
 # Target FPS limits
 set limit_high 237
-set limit_low 60
+set limit_low 80
 
 # set common_fps_limits 60
 
@@ -33,7 +33,7 @@ end
 sed -i "s/@$current_rate/@$new_rate/" $config_file
 
 # Update fps limit in MangoHud config
-sed -i "s/^\(fps_limit=\)$current_limit,,/\1$new_limit,,/" $mango_config
+sed -i "s/^\(fps_limit=\)$current_limit,60,/\1$new_limit,60,/" $mango_config
 
 # Reload Hyprland to apply
 # hyprctl reload
